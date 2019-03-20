@@ -7,8 +7,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class AppComponent  {
   name = "";
-  getNameFromChild(value:string){
-    this.name= value;
+  phoneNo ="";
+  getNameFromChild(value:any){
+    this.name= value.nameContent;
+    this.phoneNo=value.phoneNumber
   }
 
 }

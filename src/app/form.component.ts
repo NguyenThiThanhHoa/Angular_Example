@@ -6,16 +6,19 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: [ './form.component.css' ]
 })
 export class FormComponent  {
-  nameContent="";
-  phoneNumber="";
+  info = {
+  nameContent:"",
+  phoneNumber:""
+  }
+  
   getName(value: string){
-    this.nameContent=value;
+    this.info.nameContent=value;
   }
   getPhone(value:string){
-    this.phoneNumber=value;
+    this.info.phoneNumber=value;
   }
   @Output () OutputHandle = new EventEmitter<any>();
   pushContent(){
-    this.OutputHandle.emit(this.nameContent);
+    this.OutputHandle.emit(this.info);
   }
 }
