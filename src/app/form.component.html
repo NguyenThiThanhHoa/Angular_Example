@@ -1,6 +1,8 @@
 <div class="child">
 <p>Welcome to Child Component</p>
 <p>Name:</p>
-<input type="text" #name (keyup)="getName(name.value)"><br>
+<input type="text" #name (keyup)="getName(name.value)">
+<p>Phone Number:</p>
+<input type="text" #phoneNo (keyup)="getPhone(phoneNo.value)">
 <button class="button button2" (click)="pushContent()">Submit</button>
 </div>
