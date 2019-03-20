@@ -1,4 +1,8 @@
+<div class="parent">
 <hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
+  Here is one of Contents from Child:{{name}}
 </p>
+<form-app (OutputHandle)="getNameFromChild($event)"></form-app>
+<p></p>
+</div>

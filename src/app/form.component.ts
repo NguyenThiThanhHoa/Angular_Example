@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'form-app',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: [ './form.component.css' ]
 })
 export class FormComponent  {
-  name = 'Angular';
+  nameContent="";
+  getName(value: string){
+    this.nameContent=value;
+  }
+  @Output () c = new EventEmitter<any>();
+  pushContent(){
+    this.OutputHandle.emit(this.getName)
+  }
 }
