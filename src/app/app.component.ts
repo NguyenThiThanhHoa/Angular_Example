@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class AppComponent  {
   name = "";
-  getNameFromChild(value:any){
+  getNameFromChild(value:string){
     this.name= value;
   }
 

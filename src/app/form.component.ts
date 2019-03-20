@@ -10,8 +10,8 @@ export class FormComponent  {
   getName(value: string){
     this.nameContent=value;
   }
-  @Output () c = new EventEmitter<any>();
+  @Output () OutputHandle = new EventEmitter<any>();
   pushContent(){
-    this.OutputHandle.emit(this.getName)
+    this.OutputHandle.emit(this.nameContent)
   }
 }
